@@ -25,5 +25,7 @@ class UsersController < ApplicationController
                                   :password_confirmation)
     end
 
-  
+  def forget
+    update_attribute(:remember_digest, nil)
+  end
 end
